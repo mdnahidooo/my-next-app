@@ -12,7 +12,7 @@ const AboutPage = () => {
 
 
             {/* less important */}
-            <Image width="1200" height="1000" src="https://unsplash.com/photos/a-small-island-with-palm-trees-in-calm-water-VU7z8SQsBTo" alt="online image"></Image>
+            <Image width="1200" height="1000" src="https://images.unsplash.com/photo-1774816064876-10a893fc79e9?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="online image"></Image>
         </div>
     );
 };
