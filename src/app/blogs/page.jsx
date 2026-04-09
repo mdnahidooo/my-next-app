@@ -1,12 +1,22 @@
 import Link from "next/link";
 
+import { Roboto, Poppins } from 'next/font/google'
+
+const roboto = Roboto({
+    weight: '400',
+    subsets: ['latin'],
+})
+const poppins = Poppins({
+    weight: ['400', '700'],
+    subsets: ['latin'],
+})
 
 export const metadata = {
     title: "Blogs",
     description: "",
 };
 
-const Blogs = () => {
+const BlogsPage = () => {
 
     const blogs = [
         {
@@ -63,46 +73,50 @@ const Blogs = () => {
 
 
     return (
-        <div className="w-10/12 mx-auto bg-base-500 p-10">
-            <h2 className='text-3xl mb-5 text-center '>Here is all blogs:</h2>
+        <div className={poppins.className}>
 
-            <div className="grid grid-cols-1 gap-5">
+            <div className="w-10/12 mx-auto bg-base-500 p-10">
+                <h2 className='text-3xl mb-5 text-center '>Here is all blogs:</h2>
 
-                {
-                    blogs.map((blog) => (
-                        <div
-                            key={blog.id}
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transition duration-300 p-5 rounded-2xl"
-                        >
-                            <h2 className="text-xl font-semibold mb-1">
-                                {blog.title}
-                            </h2>
+                <div className="grid grid-cols-1 gap-5">
 
-                            <p className="text-sm text-gray-500 mb-2">
-                                By {blog.author}
-                            </p>
+                    {
+                        blogs.map((blog) => (
+                            <div
+                                key={blog.id}
+                                className="card bg-base-100 shadow-lg hover:shadow-xl transition duration-300 p-5 rounded-2xl"
+                            >
+                                <h2 className="text-xl font-semibold mb-1">
+                                    {blog.title}
+                                </h2>
 
-                            <p className="text-sm text-gray-600">
-                                {blog.content.slice(0, 70)}...
-                            </p>
+                                <p className="text-sm text-gray-500 mb-2">
+                                    By {blog.author}
+                                </p>
 
-                            <div className="mt-4 flex justify-between items-center">
-                                <span className="text-xs text-gray-400">
-                                    👁 {blog.views}
-                                </span>
+                                <p className="text-sm text-gray-600">
+                                    {blog.content.slice(0, 70)}...
+                                </p>
 
-                                <Link href={`/blogs/${blog.id}`}>
-                                    <button className="btn btn-primary btn-sm rounded-full">
-                                    Show Details
-                                    </button>
-                                </Link>
+                                <div className="mt-4 flex justify-between items-center">
+                                    <span className="text-xs text-gray-400">
+                                        👁 {blog.views}
+                                    </span>
+
+                                    <Link href={`/blogs/${blog.id}`}>
+                                        <button className="btn btn-primary btn-sm rounded-full">
+                                            Show Details
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </div>
+
         </div>
     );
 };
 
-export default Blogs;
+export default BlogsPage;
