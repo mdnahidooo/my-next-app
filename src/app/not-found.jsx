@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -7,7 +6,7 @@ export default function NotFound() {
             {/* 404 Badge */}
             <div className="text-center">
                 <h1 className="text-9xl font-extrabold text-red-500 mb-4">404</h1>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-600 mb-2">Page Not Found</h2>
+                <h2 className="text-3xl text-gray-600 md:text-4xl font-bold mb-2">Page Not Found</h2>
                 <p className="text-gray-600 mb-6">
                     Oops! The page you are looking for does not exist.
                 </p>
@@ -20,7 +19,7 @@ export default function NotFound() {
                 </Link>
             </div>
 
-           
+
         </div>
     );
 }
