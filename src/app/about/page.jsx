@@ -11,6 +11,7 @@ const AboutPage = () => {
             <Image className="mx-auto h-100 mt-5" width="1200" height="300" src={heroImg} alt="hero img"></Image>
 
 
+            {/* less important */}
             <Image width="1200" height="1000" src="https://unsplash.com/photos/a-small-island-with-palm-trees-in-calm-water-VU7z8SQsBTo" alt="online image"></Image>
         </div>
     );

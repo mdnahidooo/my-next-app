@@ -1,7 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
 
+
+export const metadata = {
+    title: "Dashboard",
+    description: "",
+};
+
 const DashboardLayout = ({ children }) => {
+
     return (
         <div>
 
