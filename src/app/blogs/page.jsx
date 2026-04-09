@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 const Blogs = () => {
@@ -57,8 +58,8 @@ const Blogs = () => {
 
 
     return (
-        <div className="w-10/12 mx-auto bg-base-500 mt-10 p-10">
-            <h2 className='text-3xl mb-5'>Here is all blogs:</h2>
+        <div className="w-10/12 mx-auto bg-base-500 p-10">
+            <h2 className='text-3xl mb-5 text-center '>Here is all blogs:</h2>
 
             <div className="grid grid-cols-1 gap-5">
 
@@ -85,9 +86,11 @@ const Blogs = () => {
                                     👁 {blog.views}
                                 </span>
 
-                                <button className="btn btn-primary btn-sm rounded-full">
+                                <Link href={`/blogs/${blog.id}`}>
+                                    <button className="btn btn-primary btn-sm rounded-full">
                                     Show Details
-                                </button>
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     ))
